@@ -1,20 +1,16 @@
---- lighttpd_stats_1.0/ss_lighttpd_stats.php	2008-10-05 17:59:04.134098093 +0300
-+++ lighttpd_stats_1.0/ss_lighttpd_stats.php	2008-10-05 18:07:11.707053483 +0300
+--- lighttpd_stats_1.0.orig/ss_lighttpd_stats.php	2007-02-13 23:47:00.000000000 +0200
++++ lighttpd_stats_1.0/ss_lighttpd_stats.php	2008-10-05 20:05:31.714708441 +0300
 @@ -1,3 +1,4 @@
 +#!/usr/bin/php
  <?php
  //
  // +----------------------------------------------------------------------+
-@@ -17,7 +17,7 @@
+@@ -16,13 +17,10 @@
  //		ss_lighttpd_stats.php <hostname>
  //
  //	As a script server object:
 -//		ss_lighttpd_stats.php ss_apache_stats <hostname>
 +//		ss_lighttpd_stats.php ss_lighttpd_stats <hostname>
- //
- //
- 
-@@ -21,9 +22,6 @@
  //
  //
  
@@ -74,6 +70,9 @@
  					$vars[$matches[1]] = intval($matches[2]);
  				}
  			}
-@@ -140,2 +141,0 @@
+@@ -137,5 +139,3 @@
+ 	}
+ 
+ }
 -
 -?>
