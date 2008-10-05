@@ -2,7 +2,7 @@
 Summary:	Plugin for Cacti - Lighttpd stats
 Name:		cacti-plugin-%{plugin}
 Version:	1.0
-Release:	0.1
+Release:	0.2
 License:	GPL v2
 Group:		Applications/WWW
 # http://forums.cacti.net/download.php?id=8273
@@ -16,7 +16,7 @@ BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %define		cactidir		/usr/share/cacti
-%define		resourcedir		%{cactidir}/resources
+%define		resourcedir		%{cactidir}/resource
 %define		scriptsdir		%{cactidir}/scripts
 
 %description
