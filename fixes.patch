@@ -1,0 +1,17 @@
+--- lighttpd_stats_1.0/ss_lighttpd_stats.php	2008-10-05 17:56:08.979584683 +0300
++++ lighttpd_stats_1.0/ss_lighttpd_stats.php	2008-10-05 17:59:04.134098093 +0300
+@@ -1,3 +1,4 @@
++#!/usr/bin/php
+ <?php
+ //
+ // +----------------------------------------------------------------------+
+@@ -21,9 +22,6 @@
+ //
+ //
+ 
+-/* display no errors */
+-error_reporting(0);
+-
+ if (!isset($called_by_script_server)) {
+         include_once(dirname(__FILE__) . "/../include/config.php");
+         array_shift($_SERVER["argv"]);
