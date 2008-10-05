@@ -9,7 +9,7 @@ Group:		Applications/WWW
 Source0:	lighttpd_stats_%{version}.tar.gz
 # Source0-md5:	09aa6716901e08301517004de099d240
 Patch0:		%{name}.patch
-URL:		http://forums.cacti.net/about4028.html
+URL:		http://forums.cacti.net/viewtopic.php?t=19676
 Requires:	cacti >= 0.8.6j
 Requires:	cacti-add_template
 Requires:	php-common >= 4:5.1
