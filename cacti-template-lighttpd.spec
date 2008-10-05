@@ -2,14 +2,14 @@
 Summary:	Plugin for Cacti - Lighttpd stats
 Name:		cacti-plugin-%{plugin}
 Version:	1.0
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications/WWW
 # http://forums.cacti.net/download.php?id=8273
 Source0:	lighttpd_stats_%{version}.tar.gz
 # Source0-md5:	09aa6716901e08301517004de099d240
-URL:		http://forums.cacti.net/about4028.html
-BuildRequires:	sed >= 4.0
+Patch0:		%{name}.patch
+URL:		http://forums.cacti.net/about4028.html
 Requires:	cacti >= 0.8.6j
 Requires:	cacti-add_template
 Requires:	php-common >= 4:5.1
@@ -26,7 +26,7 @@ graphing statistics for a lighttpd webserver.
 
 %prep
 %setup -q -n lighttpd_stats_%{version}
-%{__sed} -i -e '1i#!%{_bindir}/php' ss_lighttpd_stats.php
+%patch0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
