@@ -5,6 +5,15 @@
  <?php
  //
  // +----------------------------------------------------------------------+
+@@ -17,7 +17,7 @@
+ //		ss_lighttpd_stats.php <hostname>
+ //
+ //	As a script server object:
+-//		ss_lighttpd_stats.php ss_apache_stats <hostname>
++//		ss_lighttpd_stats.php ss_lighttpd_stats <hostname>
+ //
+ //
+ 
 @@ -21,9 +22,6 @@
  //
  //
