@@ -1,18 +1,22 @@
 %define		plugin lighttpd
-Summary:	Plugin for Cacti - Lighttpd stats
-Name:		cacti-plugin-%{plugin}
+%define		php_min_version 5.0.0
+%include	/usr/lib/rpm/macros.php
+Summary:	Template for Cacti - Lighttpd stats
+Name:		cacti-template-%{plugin}
 Version:	1.0
-Release:	2
+Release:	3
 License:	GPL v2
 Group:		Applications/WWW
 # http://forums.cacti.net/download.php?id=8273
 Source0:	lighttpd_stats_%{version}.tar.gz
 # Source0-md5:	09aa6716901e08301517004de099d240
-Patch0:		%{name}.patch
+Patch0:		fixes.patch
 URL:		http://forums.cacti.net/viewtopic.php?t=19676
-Requires:	cacti >= 0.8.6j
-Requires:	cacti-add_template
-Requires:	php-common >= 4:5.1
+BuildRequires:	rpm-php-pearprov >= 4.4.2-11
+BuildRequires:	rpmbuild(macros) >= 1.554
+Requires:	cacti >= 0.8.7e-8
+Requires:	php-common >= 4:%{php_min_version}
+Obsoletes:	cacti-plugin-lighttpd
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
@@ -31,14 +35,14 @@ graphing statistics for a lighttpd webserver.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{resourcedir},%{scriptsdir}}
-cp -a *.xml $RPM_BUILD_ROOT%{resourcedir}
-install *.php $RPM_BUILD_ROOT%{scriptsdir}
+cp -p *.xml $RPM_BUILD_ROOT%{resourcedir}
+install -p *.php $RPM_BUILD_ROOT%{scriptsdir}
 
 %clean
 rm -rf $RPM_BUILD_ROOT
 
 %post
-%{_sbindir}/cacti-add_template %{resourcedir}/cacti_host_template_webserver_lighttpd.xml
+%cacti_import_template %{resourcedir}/cacti_host_template_webserver_lighttpd.xml
 
 %files
 %defattr(644,root,root,755)
