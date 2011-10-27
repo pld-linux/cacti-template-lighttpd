@@ -16,6 +16,7 @@ BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.554
 Requires:	cacti >= 0.8.7e-8
 Requires:	php-common >= 4:%{php_min_version}
+Requires:	php-pcre
 Obsoletes:	cacti-plugin-lighttpd
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
