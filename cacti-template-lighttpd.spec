@@ -4,7 +4,7 @@
 Summary:	Template for Cacti - Lighttpd stats
 Name:		cacti-template-%{plugin}
 Version:	1.0
-Release:	3
+Release:	4
 License:	GPL v2
 Group:		Applications/WWW
 # http://forums.cacti.net/download.php?id=8273
