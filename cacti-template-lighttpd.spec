@@ -4,7 +4,7 @@
 Summary:	Template for Cacti - Lighttpd stats
 Name:		cacti-template-%{plugin}
 Version:	1.0
-Release:	4
+Release:	8
 License:	GPL v2
 Group:		Applications/WWW
 # http://forums.cacti.net/download.php?id=8273
@@ -15,8 +15,8 @@ URL:		http://forums.cacti.net/viewtopic.php?t=19676
 BuildRequires:	rpm-php-pearprov >= 4.4.2-11
 BuildRequires:	rpmbuild(macros) >= 1.554
 Requires:	cacti >= 0.8.7e-8
+Requires:	php(pcre)
 Requires:	php-common >= 4:%{php_min_version}
-Requires:	php-pcre
 Obsoletes:	cacti-plugin-lighttpd
 BuildArch:	noarch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
