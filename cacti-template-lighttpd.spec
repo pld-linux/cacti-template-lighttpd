@@ -1,6 +1,5 @@
 %define		plugin lighttpd
 %define		php_min_version 5.0.0
-%include	/usr/lib/rpm/macros.php
 Summary:	Template for Cacti - Lighttpd stats
 Name:		cacti-template-%{plugin}
 Version:	1.0
