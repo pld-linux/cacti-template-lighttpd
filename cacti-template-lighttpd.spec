@@ -30,7 +30,7 @@ graphing statistics for a lighttpd webserver.
 
 %prep
 %setup -q -n lighttpd_stats_%{version}
-%patch0 -p1
+%patch -P0 -p1
 
 %install
 rm -rf $RPM_BUILD_ROOT
